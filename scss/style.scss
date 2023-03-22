@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+$main-color: #4b4c5d;
+$second-color: #65667b;
+$supervisor-color: #83d689;
+$team-color: #ff5751;
+$karma-color: #ffc408;
+$calculator-color: #589fff;
+$font-stack: 'Roboto', sans-serif;
+
+// Reset
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+// Main Styling
+html,
+body {
+	font-family: $font-stack;
+	background-color: $main-color;
+	color: #fff;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 100;
+}
+
+h4 {
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+p {
+	font-size: 1rem;
+	margin: 15px 0;
+	line-height: 1.7em;
+	font-weight: 100;
+}
+
+// Utility Classes
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.txt-small {
+	font-size: 12px;
+}
+
+.txt-large {
+	font-size: 20px;
+}
+
+// MainHeader
+.mainheader {
+	padding: 80px 0;
+	.container {
+		text-align: center;
+		width: 50%;
+		margin: 0 auto;
+		h1 span {
+			font-weight: 700;
+		}
+	}
+}
+
+// Four Card
+.four-card {
+	padding-bottom: 50px;
+	.container {
+		display: flex;
+		gap: 20px;
+		.column-1,
+		.column-2,
+		.column-3 {
+			flex: 1;
+		}
+		.column-1,
+		.column-3 {
+			display: flex;
+			align-items: center;
+		}
+		.box {
+			background: $second-color;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			hr {
+				height: 5px;
+				border: none;
+			}
+			h4 {
+				margin-top: 30px;
+			}
+			h4,
+			p {
+				margin-left: 30px;
+				margin-right: 30px;
+			}
+			.box-image {
+				display: flex;
+				justify-content: flex-end;
+			}
+			img {
+				margin: 10px 30px 30px 30px;
+			}
+		}
+		.box-1 hr {
+			background: $supervisor-color;
+		}
+		.box-2 hr {
+			background: $team-color;
+		}
+		.box-3 hr {
+			background: $karma-color;
+			margin-top: 20px;
+		}
+		.box-4 hr {
+			background: $calculator-color;
+		}
+	} //End .container
+} //.four-card end
+
+// Footer
+.mainfooter {
+	text-align: center;
+	padding: 30px;
+}
+
+@media (max-width: 768px) {
+	// MainHeader
+	.mainheader {
+		padding: 50px 0;
+		.container {
+			width: 100%;
+		}
+	}
+
+	// Four Card
+	.four-card {
+		.container {
+			flex-direction: column;
+			gap: 20px;
+		} //End .container
+	} //.four-card end
+}
